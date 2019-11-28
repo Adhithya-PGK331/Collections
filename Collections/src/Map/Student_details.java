@@ -12,7 +12,7 @@ public class Student_details {
 	int n=s.nextInt();
 	Student[]stud=new Student[n];
 	
-	int i=0;
+	int i=0;int flag=0;
 	Map<Integer,Student> map=new HashMap<Integer,Student>();
 	for(i=0;i<n;i++)
 	{
@@ -51,7 +51,7 @@ public class Student_details {
 	
 for(Entry<Integer, Student> en:map.entrySet())
 {
-	int flag=0;
+	flag=0;
 	Student e=null;int key=0;
 	for(i=0;i<n;i++) {
 	key=en.getKey();
@@ -68,5 +68,8 @@ for(Entry<Integer, Student> en:map.entrySet())
 	System.out.println(key+" "+e.getName()+" "+e.getAge()+" "+e.getRegno()+" "+e.getPhoneno()+" "+e.getCname()+" "+e.getAddress()+" "+e.getMark()+" "+e.getYear());
 			}
 		}
+if(flag==0) {
+	System.out.println("Invalid register number");
+}
 	}
 }
